@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Spash from './Spash';
+import Login from './Login';
+import Home from './Home';
+import Settings from './Settings';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Onboard from './Onboard';
+import Check from './Check';
+import Exam from './Exam';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<Spash/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/onboard' element={<Onboard/>}/>
+        <Route path='/home' element={<Home/>}/>
+        <Route path='/settings' element={<Settings/>}/>
+        <Route path='/check' element={<Check/>}/>
+        <Route path='/exam' element={<Exam/>}/>
+      </Routes>
+    </Router>
   );
 }
 
