@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import {classes} from './data';
 import SingleSubject from './SingleSubject';
+import profilepic from './assets/theguy.png';
+import Header from './Header';
 
 const Home = () => {
     const [showInfo, setShowInfo] = useState(false);
@@ -11,21 +13,21 @@ const Home = () => {
     }
   return (
     <div>
-      <div>
-        <h1>My Classes</h1>
-        <div>
+        <Header/>
+        <h1 className='home-heading'>My Classes</h1>
+        <div className='home-examdiv'>
            {exams.map((cls) => {
              return (
                  <SingleSubject key={cls.id} {...cls}></SingleSubject>
              );
          })}
         </div>
-     </div>
       <footer>
-      <a>Take Demo Exam</a>
-      <div><p>Samuel Doe</p>
-          <p>18B1S1241</p>
-          <button onClick={goto}>photo</button>
+      <a className="link">Take Demo Exam</a>
+      <div class='pcontainer'>
+          <p className='namee'>Samuel Doe</p>
+          <p className='pstuid'>18B1S1241</p>
+          <img src={profilepic} alt="profile-pic" onClick={goto}/>
       </div>
       </footer>
     </div>
