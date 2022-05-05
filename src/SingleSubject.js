@@ -10,7 +10,7 @@ const SingleSubject = ({ classname, classcode,exam1, exam2,exam3 }) => {
   const goto = () => {
     localStorage.setItem('exam-date',JSON.stringify(exam2.date));
     localStorage.setItem('exam-time',JSON.stringify(exam2.time));
-    window.location.href = '/check' 
+    window.location.href = '/examsys/check' 
   }
   return (
     <article className='home-exams'>

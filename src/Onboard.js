@@ -9,7 +9,7 @@ const Onboard = () => {
 
     const changeContent = () => {
         if(index==3){
-            window.location.href = '/home'
+            window.location.href = '/examsys/home'
         }
         setIndex(index+1);
     }

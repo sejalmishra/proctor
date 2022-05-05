@@ -13,10 +13,10 @@ const Spash = () => {
   const time = JSON.parse(localStorage.getItem('exam-time'));
 
   const goback = () => {
-    window.location.href = '/home'
+    window.location.href = '/examsys/home'
   }
   const beginexam =()=> {
-    window.location.href = '/exam'
+    window.location.href = '/examsys/exam'
   }
   return (
     <div>

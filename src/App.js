@@ -12,13 +12,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path='/' element={<Spash/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/onboard' element={<Onboard/>}/>
-        <Route path='/home' element={<Home/>}/>
-        <Route path='/settings' element={<Settings/>}/>
-        <Route path='/check' element={<Check/>}/>
-        <Route path='/exam' element={<Exam/>}/>
+        <Route exact path='/examsys' element={<Spash/>}/>
+        <Route path='/examsys/login' element={<Login/>}/>
+        <Route path='/examsys/onboard' element={<Onboard/>}/>
+        <Route path='/examsys/home' element={<Home/>}/>
+        <Route path='/examsys/settings' element={<Settings/>}/>
+        <Route path='/examsys/check' element={<Check/>}/>
+        <Route path='/examsys/exam' element={<Exam/>}/>
       </Routes>
     </Router>
   );

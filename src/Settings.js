@@ -12,7 +12,7 @@ const Settings = () => {
   const [showSetting2, setShowSetting2] = useState(false);
 
   const goback = () => {
-    window.location.href = '/home'
+    window.location.href = '/examsys/home'
   }
   return (
     <div>
