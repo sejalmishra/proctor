@@ -11,7 +11,7 @@ import Exam from './Exam';
 function App() {
   return (
     <Router>
-      <HashRouter>
+      <Routes>
         <Route exact path='/' element={<Spash/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/onboard' element={<Onboard/>}/>
@@ -19,7 +19,7 @@ function App() {
         <Route path='/settings' element={<Settings/>}/>
         <Route path='/check' element={<Check/>}/>
         <Route path='/exam' element={<Exam/>}/>
-      </HashRouter>
+      </Routes>
     </Router>
   );
 }
