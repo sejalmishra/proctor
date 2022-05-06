@@ -146,14 +146,9 @@ position: relative;
 left: 3.3%;
 line-height: 40px;
 }
-.span5 input[type=range]{
-position: absolute;
-top: 61%;
-right: 19.4%;
-width: 53px;
-height: 27px;
-border: 3px solid #FFFFFF;
-border-radius: 16.5px;
+.span5{
+position: relative;
+left: 83.4%;
 }
 .g2{
 width: 198px;
@@ -240,12 +235,7 @@ position: relative;
 left: 3.3%;
 line-height: 40px;
 }
-.span11 input[type=range]{
+.span12{
 position: relative;
-top: 75%;
-left: 80%;
-width: 53px;
-height: 30px;
-border: 3px solid #FFFFFF;
-border-radius: 16.5px;
+left: 83.8%;
 }

@@ -6,13 +6,14 @@ import down from './assets/downwhite.png';
 import up from './assets/upwhite.png';
 import back from './assets/backbtn.png';
 import Header from './Header';
+import { Switch } from '@mui/material';
 
 const Settings = () => {
   const [showSetting1, setShowSetting1] = useState(false);
   const [showSetting2, setShowSetting2] = useState(false);
 
   const goback = () => {
-    window.location.href = '/examsys/home'
+    window.location.href = '/home'
   }
   return (
     <div>
@@ -32,9 +33,9 @@ const Settings = () => {
       <div className='set1'>
       <div className='point1'><span className='span1'>Settings 1 </span><button onClick={() => setShowSetting1(!showSetting1)} style={{background: '#232527', border: 'none'}}>{showSetting1 ? <img src={up} className='up' style={{height: '40px', width: '40px'}}/> : <img src={down} className='up' style={{height: '40px', width: '40px'}}/>}</button></div>
       <div className='point2'></div>
-      <div className='point3'><span className='span2'>Settings 2 </span> <span className='span3'><input type="range" min="0" max="1"/></span></div>
+      <div className='point3'><span className='span2'>Settings 2 </span> <span className='span3'><Switch defaultChecked color='default'/></span></div>
       </div>
-      {showSetting1 && <div><div className='point4'></div><div className='point5'><span className='span4'>Settings 2 </span><span className='span5'><input type="range" min="0" max="1"/></span></div>
+      {showSetting1 && <div><div className='point4'></div><div className='point5'><span className='span4'>Settings 2 </span><span className='span5'><Switch defaultChecked color='default'/></span></div>
       </div>}
       </div>
 
@@ -43,9 +44,9 @@ const Settings = () => {
       <div className='set2'>
       <div className='point6'><span className='span6'>Settings 1</span> <span className='span7'><button onClick={() => setShowSetting2(!showSetting2)} style={{background: '#232527', border: 'none', color: '#fff'}}>{showSetting2 ? 'view less' : 'view more'}</button></span></div>
       <div className='point7'></div>
-      <div className='point8'><span className='span8'>Settings 2</span> <span className='span9'><input type="range" min="0" max="1"/></span></div>
+      <div className='point8'><span className='span8'>Settings 2</span> <span className='span9'><Switch defaultChecked color='default'/></span></div>
       </div>
-      {showSetting2 && <div><div className='point9'></div><div className='point10'><span className='span11'>Settings 2</span> <span className='span11'><input type="range" min="0" max="1"/></span></div></div>}
+      {showSetting2 && <div><div className='point9'></div><div className='point10'><span className='span11'>Settings 2</span> <span className='span12'><Switch defaultChecked color='default'/></span></div></div>}
       </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ const Login = () => {
     e.preventDefault();
       localStorage.setItem('username',JSON.stringify(username));
       console.log(localStorage.getItem('username'));
-      window.location.href = '/examsys/onboard'
+      window.location.href = '/onboard'
   }
 
   return (

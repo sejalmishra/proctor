@@ -9,7 +9,7 @@ const Home = () => {
     const [exams, setexams] = useState(classes);
 
     const goto = () => {
-      window.location.href = '/examsys/settings'   
+      window.location.href = '/settings'   
     }
   return (
     <div>

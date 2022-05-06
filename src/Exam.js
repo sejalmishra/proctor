@@ -3,18 +3,20 @@ import timer from './assets/timerimg.png';
 import {questions, numbers} from './data';
 import './examination.css';
 import Header from './Header';
+import redalert  from './assets/redwarning.png';
+import yellowalert from './assets/yellowwarning.png';
+import AlertM from './Alert';
 
 const Exam = () => {
   const [hour, setHour] = useState(1);
   const [minute, setMinute] = useState(30);
   const [sec,setSec] = useState(0);
   const [index, setIndex] = useState(0);
-  const [quest, setQuest] = useState(questions);
   const [display, setDisplay] = useState(0);
   const { id, Question, img, optiona, optionb, optionc, optiond} =  questions[index];
   const {idd, num1, num2, num3} = numbers[display];
-
   const intervalRef = useRef();
+ 
   let count=5400;
   function startSetInterval() {
         count--;
@@ -35,6 +37,7 @@ const Exam = () => {
   const onChangeValue = (event) => {
     localStorage.setItem(JSON.stringify(id),JSON.stringify(event.target.value));
     console.log(localStorage.getItem(JSON.stringify(id)));
+    
   }
 
   const previousQuestion =()=>{
@@ -65,10 +68,10 @@ const Exam = () => {
     setDisplay(display+1);
   }
   const exit = () => {
-    window.location.href = '/examsys/home'
+    window.location.href = '/home'
   }
   const submit = () => {
-    window.location.href = '/examsys/check'
+    window.location.href = '/check'
   }
   return (
     <div className='bodyy'>
@@ -91,14 +94,14 @@ const Exam = () => {
         <p className='q-question'>{Question}</p>
         {img? <img className='q-img' src={img}/> : <div></div>}
         </div>
-        <div onChange={(e)=>onChangeValue(e)}>
-        <div className='optiona'><input type="radio" name="options" id="optiona" value="a"/>
+        <div>
+        <div className='optiona'><input type="radio" name={id} id='optiona' value="a"  onChange={(e)=>onChangeValue(e)}/>
         <label htmlFor="optiona">{optiona}</label></div>
-        <div className='optionb'><input type="radio" name="options" id="optionb" value="b"/>
+        <div className='optionb'><input type="radio" name={id} id='optionb' value="b" onChange={(e)=>onChangeValue(e)}/>
         <label htmlFor="optionb">{optionb}</label></div>
-        <div className='optionc'><input type="radio" name="options" id="optionc" value="c"/>
+        <div className='optionc'><input type="radio" name={id} id='optionc' value="c" onChange={(e)=>onChangeValue(e)}/>
         <label htmlFor="optionc">{optionc}</label></div>
-        <div className='optiond'><input type="radio" name="options" id="optiond" value="d"/>
+        <div className='optiond'><input type="radio" name={id} id='optiond' value="d" onChange={(e)=>onChangeValue(e)}/>
         <label htmlFor="optiond">{optiond}</label></div>
         </div>
             <button className='q1' onClick={() => setIndex(0)} style={ id==1? {background: '#fff'} : {background: '#232527'}}>
@@ -171,7 +174,10 @@ const Exam = () => {
       </div>
         <button onClick={previousQuestion} className='previous-btn' style={ id==1 ? {background: 'rgba(255, 255, 255, 0.5)'}:{background: '#fff'}}><span className='lt'>&lt;</span> Previous</button>
         <button onClick={nextQuestion} className='next-btn' style={ id==20 ? {background: 'rgba(255, 255, 255, 0.5)'}:{background: '#fff'}}>Next <span className='gt'>&gt;</span></button>
+        
       </div>
+      <AlertM alertimg={redalert}/>
+      <AlertM alertimg={yellowalert}/>
     </div>
   )
 }
