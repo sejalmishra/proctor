@@ -3,7 +3,7 @@ import frame from './assets/frame.png';
 import Header from './Header';
 const Spash = () => {
   const nextpage = () => {
-    window.location.href = '/login'
+    window.location.href = '/proctor/#/login'
   }
   return (
     <div>

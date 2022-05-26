@@ -10,15 +10,15 @@ const SingleSubject = ({ classname, classcode,exam1, exam2,exam3 }) => {
   const goto = () => {
     localStorage.setItem('exam-date',JSON.stringify(exam2.date));
     localStorage.setItem('exam-time',JSON.stringify(exam2.time));
-    window.location.href = '/check' 
+    window.location.href = '/proctor/#/check' 
   }
   return (
     <article className='home-exams'>
       <header>
         <h4>{classname}</h4>
         <p className='para'>{classcode}</p>
-        <button className='home-btn' onClick={() => setShowInfo(!showInfo)}>
-          {showInfo ? <img className='dropup' src={up} alt="up"/> : <img className='dropdown' src={down} alt="down"/>}
+        <button className='home-btn' onClick={() => setShowInfo(!showInfo)} style={{background: '#232527', border: 'none', color: '#fff'}}>
+          {showInfo ? 'View Less' : 'View More'}
         </button>
       </header>
       {showInfo && 

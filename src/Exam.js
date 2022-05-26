@@ -68,10 +68,10 @@ const Exam = () => {
     setDisplay(display+1);
   }
   const exit = () => {
-    window.location.href = '/home'
+    window.location.href = '/proctor/#/home'
   }
   const submit = () => {
-    window.location.href = '/check'
+    window.location.href = '/proctor/#/check'
   }
   return (
     <div className='bodyy'>

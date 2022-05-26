@@ -128,7 +128,8 @@ margin: 2px 0px;
 .home-btn{
 background: #232527;
 border: none;
-margin-left: 75rem;
+margin-left: 73rem;
+margin-bottom: 0.5rem;
 }
 .dropup{
   height: 30px;

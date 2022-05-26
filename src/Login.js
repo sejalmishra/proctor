@@ -11,7 +11,7 @@ const Login = () => {
     e.preventDefault();
       localStorage.setItem('username',JSON.stringify(username));
       console.log(localStorage.getItem('username'));
-      window.location.href = '/onboard'
+      window.location.href = '/proctor/#/onboard'
   }
 
   return (
@@ -27,9 +27,9 @@ const Login = () => {
         <input type='password' name='password' placeholder='Password' className='formelement'/>
         <div className='bottom-border'></div>
         <div className='atags'>
-        <a href='/'>Reset Password From Defalut/</a>
+        <a href='/#/'>Reset Password From Defalut/</a>
         <br></br>
-        <a href='/'>Forgot Password</a>
+        <a href='/#/'>Forgot Password</a>
         </div>
         <button type='submit' className='login-btn'>Log In</button>
       </form>

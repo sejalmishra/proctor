@@ -28,10 +28,10 @@ const Spash = () => {
   },[]);
 
   const goback = () => {
-    window.location.href = '/home'
+    window.location.href = '/proctor/#/home'
   }
   const beginexam =()=> {
-    window.location.href = '/exam'
+    window.location.href = '/proctor/#/exam'
   }
   return (
     <div>
